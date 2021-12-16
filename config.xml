@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="fr.preprodparten.betgame" version="0.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="fr.digi-corp.betgame" version="0.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>BetGame</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="Emeric.Bayard@Outlook.fr" href="">Bayard Tech</author>
     <content src="index.html" />
     <access origin="*" />
-    <allow-intent href="http://*/*" />  
+    <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
