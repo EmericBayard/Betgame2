@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BetGame</string>
+    <string name="title_activity_main">BetGame</string>
+    <string name="package_name">fr.preprodparten.betgame</string>
+    <string name="custom_url_scheme">fr.preprodparten.betgame</string>
+</resources>

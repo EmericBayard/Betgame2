@@ -1,0 +1,8 @@
+{
+  "name": "BetGame",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}
