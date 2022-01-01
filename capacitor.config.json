@@ -1,1 +1,11 @@
-{}
+{
+    "appId": "fr.digi-corp.betgame",
+    "appName": "BetGame",
+    "bundledWebRuntime": false,
+    "webDir": "www",
+    "plugins": {
+        "Keyboard": {
+            "resize": "none"
+        }
+    }
+}
