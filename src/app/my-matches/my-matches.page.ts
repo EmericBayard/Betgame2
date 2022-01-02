@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { TournamentComponent } from '../tournament/tournament.component';
+
 @Component({
   selector: 'app-my-matches',
   templateUrl: './my-matches.page.html',
@@ -31,14 +31,6 @@ export class MyMatchesPage implements OnInit {
    } 
   completed_match_info(){ 
      this.route.navigate(['./completed-match-info']);   
-   }
-
-   async presentModal() {
-    const modal = await this.modalController.create({
-      component: TournamentComponent,
-      cssClass: ''
-    });
-    return await modal.present();
-  }  
+   }     
  
 }
