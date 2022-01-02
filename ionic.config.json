@@ -1,7 +1,7 @@
 {
-  "name": "Fantasy-ionic5",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
+    "name": "fr.digi-corp.betgame",
+    "integrations": {
+        "cordova": {}
+    },
+    "type": "angular"
 }
