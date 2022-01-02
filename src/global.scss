@@ -17,11 +17,11 @@
 
 
  :root {
-     --primary: #761461;
-     --secondary: #391531;
-     --secondary-dark: #000000;
-     --secondary-light: #391531;
-     --bg-color: #0e050c;
+     --primary: #25cb3c;
+     --secondary: #151d24;
+     --secondary-dark: #0f1419;
+     --secondary-light: #2d343a;
+     --bg-color: #0d0e0f;
      --text-light: #b3b3b3;
      --text-dark: #53606b;
      --text-black: #000;
@@ -32,8 +32,6 @@
  .bg_color {
      --background: var(--bg-color);
  }
-
-
 
  .d-flex {
      display: flex !important;

@@ -9,7 +9,7 @@ ion-header {
         left: 0;
         width: 100%;
         height: calc(100% - 0px);
-        background: #391531;
+        background: url('../../assets/images/img_header.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -42,7 +42,6 @@ ion-header {
                 color: var(--white);
                 font-size: .98rem;
                 letter-spacing: .5px;
-                
 
                 img {
                     width: 15px;
@@ -178,6 +177,7 @@ ion-list {
                     font-size: 0.6rem;
                     font-weight: 300;
                     margin: auto;
+
                 }
 
             }
@@ -295,83 +295,4 @@ ion-slides {
         text-align: initial;
         position: relative;
     }
-}
-
-.turnament-card {
-    width: 90%;
-    height: 90%;
-    margin-left: auto;
-    margin-right:auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.turnament-title {
-    width: 100%;
-    height:auto;
-    background:rgba(241, 231, 239, 0.4);
-    text-align: center;
-    margin:auto;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    
-    h6 {
-        margin: 0;
-        color: var(--white);
-        font-size: 0.8rem;
-        font-weight: 400;
-        margin: auto;
-    }
-}
-
-.turnament-date {
-    width: 90%;
-    margin-top: 2%;
-    text-align: center;
-    white-space:nowrap;
-    display:flex;
-    flex-direction:row; 
-
-    h4 {
-        margin: 0;
-        color: var(--white);
-        font-size: 0.6rem;
-        font-weight: 300;
-        margin: auto;
-    }
-}
-
-.turnament-infos {
-    display:flex;
-    flex-direction:row;
-}
-
-.turnament-subinfos {
-    width:80%;
-    height: auto;
-
-    h3 {
-        color: var(--white);
-        font-size: 0.6rem;
-        font-weight: 300;
-        margin-left: 10%;
-    }
-}
-
-.betgame-logo {
-    width: 9px;
-}
-.Logo {
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    width:20%;
-    height:100%;
-}
-
-.icon {
-    display:flex;
-    justify-content:center;
-    font-size: 0.6rem;
-    font-weight: 300;
 }

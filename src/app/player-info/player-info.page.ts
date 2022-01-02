@@ -9,7 +9,7 @@ import { ModalController } from '@ionic/angular';
 export class PlayerInfoPage implements OnInit {
    faqExpand1: boolean;
    faqExpand2: boolean;
-   faqExpand3: boolean; 
+   faqExpand3: boolean;
    faqExpand4: boolean;
    faqExpand5: boolean;
    faqExpand6: boolean;

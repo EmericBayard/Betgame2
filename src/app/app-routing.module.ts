@@ -72,16 +72,6 @@ const routes: Routes = [
     loadChildren: () => import('./my-profile/my-profile.module').then( m => m.MyProfilePageModule)
   },
   {
-    path: 'my-team',
-    loadChildren: () => import ('./my-team/my-team.module').then( m => m.MyTeamPageModule)
-
-  },
-  {
-    path: 'my-stat',
-    loadChildren: () => import ('./stats/stats.module').then( m => m.StatsPageModule)
-
-  },
-  {
     path: 'my-points',
     loadChildren: () => import('./my-points/my-points.module').then( m => m.MyPointsPageModule)
   },

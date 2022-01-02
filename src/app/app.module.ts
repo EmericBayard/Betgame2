@@ -14,8 +14,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { APP_CONFIG, BaseAppConfig } from './app.config';
 
-
-
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -24,7 +22,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   entryComponents: [],
    imports: [
 	  BrowserModule, 
-	  IonicModule.forRoot(),
+	  IonicModule.forRoot(), 
       AppRoutingModule,
       HttpClientModule,
       TranslateModule,     

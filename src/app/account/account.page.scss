@@ -2,11 +2,6 @@ ion-header ion-toolbar ion-title {
     padding: 0 22px !important;
 }
 
-ion-header {
-    //background: url(../../assets/icon/5.jpg);
-    background-image: linear-gradient(#eb01a5, #391431); 
-}
-
 .page-title {
     padding-bottom: 35px;
 
@@ -33,10 +28,9 @@ ion-header {
 }
 
 ion-content {
-    //border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;
     overflow: hidden;
-    // --background: var(--transparent) !important;
-    
+    --background: var(--transparent) !important;
 }
 
 .content-inner {
@@ -47,7 +41,6 @@ ion-content {
     overflow-y: auto;
     z-index: 11;
     background: var(--secondary);
-    
 
     ion-item {
         padding: 14px 22px 14px 22px;
@@ -114,7 +107,6 @@ ion-content {
     }
 
     .lavel {
-        
         ion-item {
             padding-top: 25px;
         }
