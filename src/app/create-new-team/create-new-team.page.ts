@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { IonSlides } from '@ionic/angular';
 import { PlayerInfoPage } from '../player-info/player-info.page';  
-
+import { StatsPage } from '../stats/stats.page';
+import { SearchPlayerComponent } from '../search-player/search-player.component';
 @Component({
    selector: 'app-create-new-team',
    templateUrl: './create-new-team.page.html',
@@ -203,5 +204,16 @@ export class CreateNewTeamPage implements OnInit {
    player_info() {
     this.modalController.create({ component: PlayerInfoPage }).then((modalElement) => modalElement.present());
   }  
+
+  async searchModal() {
+    const modal = await this.modalController.create({
+      component:  SearchPlayerComponent,
+      cssClass: '',
+      componentProps: {
+         'pseudo': 'Douglas',
+         }
+      });
+   return await modal.present();
+  }
 
 }

@@ -10,6 +10,6 @@ export class AboutUsPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+  } 
 
 }

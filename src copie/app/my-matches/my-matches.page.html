@@ -1,0 +1,2065 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title-inner d-flex animate__animated animate__fadeInUp wow" data-wow-duration=".15s">
+                {{'my_matches' | translate}}
+                <h3 class="end">
+                    <img src="assets/images/icons/ic_homeact.png">&nbsp;
+                    Football
+                    <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                </h3>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+    <ion-segment mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment" lines="none">
+        <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".2s" value="0">
+            <ion-label class="ion-text-center">
+                {{'upcoming' | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".25s" value="1">
+            <ion-label class="ion-text-center">
+                {{'live' | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".3s" value="2">
+            <ion-label class="ion-text-center">
+                {{'completed' | translate}}
+            </ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="bg_color">
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">Lineup Announced <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>3h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>2h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+                
+                   <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">Lineup Announced <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>3h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>2h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>   <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">Lineup Announced <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>3h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>2h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>   <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">Lineup Announced <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>3h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>2h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>   <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">Lineup Announced <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>3h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>2h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>   <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">Lineup Announced <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>3h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>0h 9m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="upcoming_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>2h 29m</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+
+
+
+
+
+        <ion-slide>
+            <ion-list lines="none">
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="live_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'live' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <!--
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+-->
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="live_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'live' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                            <!--
+                            <h5 class="end">
+                                <ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                            </h5>
+-->
+                        </div>
+                    </div>
+                </ion-item>
+
+            </ion-list>
+        </ion-slide>
+
+
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $50</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $150</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $50</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $150</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item><ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $50</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $150</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item><ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $50</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $150</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item><ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $50</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $150</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item><ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                                        <h4>WlS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Cobra Guardians</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>CBR</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_7.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                            <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(137,95,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Maxican Tigers</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_6.png">&nbsp;&nbsp;
+                                        <h4>MXT</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(31,97,120,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Shark Champions</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>SKC</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_5.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $50</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Premier {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(138,28,31,0.8690826672465861) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Blazzer Bulls</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_4.png">&nbsp;&nbsp;
+                                        <h4>BLB</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(72,140,23,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Power Pands</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>PPD</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_1.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>2 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;4 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $150</h5>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="completed_match_info()">
+                    <div class="item-inner">
+                        <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                            <h6>Maxican {{'league' | translate}}</h6>
+                        </div>
+                        <ion-row>
+                            <ion-col class="team_1" size="6">
+                                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(136,118,18,1) 100%);"></div>
+                                <div class="team-detail">
+                                    <h3 class="ion-text-start">Wolves United</h3>
+                                    <div class="team-logo d-flex">
+                                        <img src="assets/images/team_logo/team_3.png">&nbsp;&nbsp;
+                                        <h4>WLS</h4>
+                                    </div>
+                                </div>
+                            </ion-col>
+
+                            <div class="timeing">
+                                <h6>{{'completed' | translate}}</h6>
+                            </div>
+
+                            <ion-col class="d-flex team_2" size="6">
+                                <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(131,23,71,1) 100%);"></div>
+                                <div class="team-detail end">
+                                    <h3 class="ion-text-end">Great Gorillas</h3>
+                                    <div class="team-logo d-flex">
+                                        <h4>GGS</h4>&nbsp;&nbsp;
+                                        <img src="assets/images/team_logo/team_2.png">
+                                    </div>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <div class="item-footer d-flex">
+                            <h5>1 {{'teams' | translate}} &nbsp;&nbsp;&nbsp;2 {{'contests' | translate}}</h5>
+                           <h5 class="end">{{'you_we_earned' | translate}} $24</h5>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
