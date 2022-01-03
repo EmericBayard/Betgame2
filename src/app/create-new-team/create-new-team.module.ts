@@ -10,6 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
  
 import { CreateNewTeamPage } from './create-new-team.page';
 
+
 @NgModule({
   imports: [
     CommonModule,

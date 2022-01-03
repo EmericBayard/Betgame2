@@ -3,6 +3,7 @@ import { IonSlides } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { ReminderPage } from '../reminder/reminder.page'; 
+import { SubscribeTournamentComponent } from '../subscribe-tournament/subscribe-tournament.component'
 @Component({
   selector: 'app-upcoming-match-info',
   templateUrl: './upcoming-match-info.page.html',
@@ -29,5 +30,14 @@ export class UpcomingMatchInfoPage implements OnInit {
    } 
  reminder() {
     this.modalController.create({ component: ReminderPage }).then((modalElement) => modalElement.present());
-  }     
+  }   
+  
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: SubscribeTournamentComponent,
+      cssClass: ''
+    });
+    return await modal.present();
+  }
+ 
 }

@@ -15,6 +15,12 @@ export class AccountPage implements OnInit {
   ngOnInit() {
   }
 
+ my_team(){
+    this.route.navigate(['./my-team']);
+ }
+ stats() {
+   this.route.navigate(['./my-stat'])
+ }
  my_profile(){ 
      this.route.navigate(['./my-profile']);   
    }  

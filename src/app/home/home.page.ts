@@ -17,4 +17,8 @@ export class HomePage implements OnInit {
  contests(){ 
      this.route.navigate(['./contests']);   
    } 
+
+  liveMatchInfo() {
+    this.route.navigate(['./live-match-info']);
+  }
 }

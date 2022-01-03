@@ -7,7 +7,7 @@ ion-header {
         left: 0;
         width: 100%;
         height: calc(100% - 88px);
-        background: url('../../assets/images/img_header.png');
+        background: #391531;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -23,9 +23,8 @@ ion-header {
             .logo {
                 min-width: fit-content;
                 max-width: 50%;
-
                 img {
-                    width: 110px;
+                    width: 37px;
                     display: block;
                 }
 
@@ -129,7 +128,7 @@ ion-header {
                     margin: auto;
 
                     h6 {
-                        color: var(--primary);
+                        color: var(--white);
                         margin: 0;
                         font-size: .6rem;
                         font-weight: 400;
@@ -285,7 +284,7 @@ ion-list {
                 margin: auto;
 
                 h6 {
-                    color: var(--primary);
+                    color: var(--white);
                     margin: 0;
                     font-size: .6rem;
                     font-weight: 400;

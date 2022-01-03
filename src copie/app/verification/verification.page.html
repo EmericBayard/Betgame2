@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+    <div class="page-title">
+        <h2 class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">{{'verification' | translate}}</h2>
+        <h3 class="animate__animated animate__fadeInUp wow" data-wow-duration=".8s">{{'in_less_that_a_minute' | translate}}</h3>
+    </div>
+</ion-header>
+
+
+<ion-content class="bg_color" fullscreen>
+    <div class="background center_img">
+        <img src="assets/images/bg.png" class="crop_img">
+    </div>
+    <div class="content-inner">
+        <div class="form">
+            <h2>{{'we_ve_sent_6_digit_verification_code' | translate}}.</h2>
+            <ion-list class="animate__animated animate__fadeInUp" lines="none">
+                <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.3s">
+                    <div class="item_inner">
+                        <ion-label>{{'enter_code' | translate}}</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'enter_6_digit_code' | translate}}"></ion-input>
+                    </div>
+                </ion-item>
+                <ion-button size="large" class="btn animate__animated animate__slideInUp wow" data-wow-duration=".4s" expand="round" (click)="tabs()">{{'get_started' | translate}}</ion-button>
+            </ion-list>
+        </div>
+    </div>
+</ion-content>
