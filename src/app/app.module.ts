@@ -14,7 +14,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { APP_CONFIG, BaseAppConfig } from './app.config';
 
-
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';  
+import { WebView } from '@ionic-native/ionic-webview/ngx';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -40,7 +41,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     StatusBar,
     SplashScreen,
     { provide: APP_CONFIG, useValue: BaseAppConfig },
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    WebView,
+    Camera,
   ],
   bootstrap: [AppComponent],
 })
