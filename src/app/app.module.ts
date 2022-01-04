@@ -13,7 +13,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { APP_CONFIG, BaseAppConfig } from './app.config';
-
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';  
+import { WebView } from '@ionic-native/ionic-webview/ngx';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -40,8 +41,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     StatusBar,
     SplashScreen,
     { provide: APP_CONFIG, useValue: BaseAppConfig },
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Camera,
+    WebView
   ],
   bootstrap: [AppComponent],
+  
 })
 export class AppModule {}
