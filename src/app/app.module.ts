@@ -43,7 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     { provide: APP_CONFIG, useValue: BaseAppConfig },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Camera,
-    WebView
+    WebView,
   ],
   bootstrap: [AppComponent],
   

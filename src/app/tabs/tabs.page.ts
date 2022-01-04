@@ -37,30 +37,31 @@ export class TabsPage {
 
 
   async addNewToGallery() {
-    let alertBox = await this.alertCtrl.create({
-      header: 'Choose From',
-      buttons: [
-        {
-          text: 'Camera',
-          handler: () => {
-            this.camera.getPicture(this.cameraOptions).then(res=>{
-              console.log('response =', res);
-              this.photo = res;
-            })
-          }
-        }, 
-        {
-          text: 'Gallery',
-          handler: () => {
-             this.camera.getPicture(this.galleryOptions).then(res=>{
-               console.log('response =', res);
-               this.photo = res;
-             })
-          }
-        },
-      ]
-    })
-    await alertBox.present();
+    console.log('fun !');
+    // let alertBox = await this.alertCtrl.create({
+    //   header: 'Choose From',
+    //   buttons: [
+    //     {
+    //       text: 'Camera',
+    //       handler: () => {
+    //         this.camera.getPicture(this.cameraOptions).then(res=>{
+    //           console.log('response =', res);
+    //           this.photo = res;
+    //         })
+    //       }
+    //     }, 
+    //     {
+    //       text: 'Gallery',
+    //       handler: () => {
+    //          this.camera.getPicture(this.galleryOptions).then(res=>{
+    //            console.log('response =', res);
+    //            this.photo = res;
+    //          })
+    //       }
+    //     },
+    //   ]
+    // })
+    // await alertBox.present();
   }
 
  
