@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { APP_CONFIG, BaseAppConfig } from './app.config';
 
-import { Camera } from '@ionic-native/camera/ngx';
+// import { Camera } from '@ionic-native/camera/ngx';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -41,7 +41,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SplashScreen,
     { provide: APP_CONFIG, useValue: BaseAppConfig },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    Camera
+    // Camera
   ],
   bootstrap: [AppComponent],
 })
